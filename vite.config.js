@@ -6,7 +6,7 @@ import vueJsx from '@vitejs/plugin-vue-jsx'
 import VueDevTools from 'vite-plugin-vue-devtools'
 
 // https://vitejs.dev/config/
-export default defineConfig({
+export default defineConfig(({ mode }) => ({
   plugins: [
     vue(),
     vueJsx(),
@@ -17,5 +17,6 @@ export default defineConfig({
       '@': fileURLToPath(new URL('./src', import.meta.url))
     }
   },
-  publicPath: process.env.NODE_ENV === "production" ? "/seakers-shop-vue/" : "/",
-})
+  base: mode === 'production' ? '/seakers-shop-vue/' : '/'
+}))
+
