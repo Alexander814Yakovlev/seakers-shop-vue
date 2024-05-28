@@ -56,11 +56,11 @@ const createOrder = async () => {
         <div v-if="orderId" class="flex h-full items-center">
             <InfoBlock title="Заказ оформлен!"
                 :description="`Ваш заказ #${orderId} скоро будет передан курьерской доставке`"
-                image-url='/order-success-icon.png' @onClickBack="toggleDrawer" />
+                image-url='./order-success-icon.png' @onClickBack="toggleDrawer" />
         </div>
         <div v-if="!cartTotal && !orderId" class="flex h-full items-center">
             <InfoBlock title="Корзина пустая" description="Добавьте хотя бы одну пару кроссовок, чтобы сделать заказ."
-                image-url='/package-icon.png' @onClickBack="toggleDrawer" />
+                image-url='./package-icon.png' @onClickBack="toggleDrawer" />
         </div>
 
     </div>
