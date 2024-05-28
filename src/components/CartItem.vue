@@ -15,7 +15,7 @@ defineProps({
             <p class="block w-full">{{ title }}</p>
             <div class="flex justify-between mt-2">
                 <b>{{ price }} &#8381;</b>
-                <img class="opacity-50 hover:opacity-100 cursor-pointer transition" src="./close.svg" alt="X"
+                <img class="opacity-50 hover:opacity-100 cursor-pointer transition" src="/close.svg" alt="X"
                     @click="removeFromCart" />
             </div>
         </div>
