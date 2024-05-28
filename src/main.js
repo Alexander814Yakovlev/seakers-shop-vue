@@ -14,7 +14,7 @@ const routes = [
     { path: '/favorites', name: 'Favorites', component: Favorites }
 ]
 const router = createRouter({
-    history: createWebHistory(),
+    history: createWebHistory(import.meta.env.BASE_URL),
     routes: routes,
 })
 
