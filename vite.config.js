@@ -17,5 +17,10 @@ export default defineConfig({
       '@': fileURLToPath(new URL('./src', import.meta.url))
     }
   },
-  publicDir: process.env.NODE_ENV === "production" ? "/seakers-shop-vue/" : "/",
 })
+
+module.exports = {
+  publicPath: process.env.NODE_ENV === 'production'
+    ? '/seakers-shop-vue/'
+    : '/'
+}
